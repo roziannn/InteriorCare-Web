@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/*CSS MICRO CLEARFIX===*/
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ .cf:after {
+     clear: both;
+ }
+ .cf {
+     *zoom: 1;
+ }
+ /*===================================*/
+body {
+    margin: 0;
+    position: relative;
+    font-family:'Lato', sans-serif;
+    color: #121212;
+}
+.container {
+    width: 1200px;
+    margin: 10px auto;
+    background-color: rgb(255, 255, 255);
+} 
+header {
+    display: flex;
+    border-bottom: 2px solid #eaeaea;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    z-index: 999;
+    width: 1200px;
+}
+header .logo{
+    float: left;
+    font-size: 32px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #30475E;
+    font-family: 'Playfair Display', serif;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block; 
+    margin: 20px;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #121212;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #F05454;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s; 
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+main {
+    overflow: auto;
+}
+#hero {
+    width: 100%;
+    background-position: 0px -80px;
+}
+.content-hero img {
+    width: 60%;
+    height: 500px;
+    float: right;
+    border-radius: 12px;
+    margin-top: 70px;
+}
+.content-hero {
+    margin-top: 60px;
+    height: 620px;
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slide {
+    inset: 0;
+    opacity: 0;
+}
+
+
+.title {
+    font-size: 52px;
+}
+.content-hero .hero-desc {
+    float: left;
+    width: 40%;
+    font-family: sans-serif;
+    font-size: 36px;
+    margin-top: 100px;
+}
+.content-hero .hero-desc p {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    width: 80%;
+    margin-top: -30px;
+}
+#blog {
+    width: 100%;
+    height: 1000px;
+    border-top: 2px solid #eaeaea;
+    margin-bottom: 30px;
+}
+.content-blog {
+   width: 65%;
+   float: left;
+   margin-top: 50px;
+   box-sizing: border-box;
+}
+article {  
+    height: 230px;
+    margin-bottom: 50px;
+    position: relative;
+    text-align: justify;
+}
+article h1 {
+    font-size: 20px;
+}
+article p {
+    width: 100%;
+    height: 150px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+article img {
+    float: left;
+    width: 220px;
+    height: 150px;
+    padding-right: 20px;
+}
+.more a {
+    position: relative;
+    text-decoration: none;
+    top: 5px;
+    font-weight: bold;
+    color: #61808f;
+}
+.more a:hover {
+    color: #F05454;
+}
+.date {
+    float: right;
+    position: relative;
+    font-size: 12px;
+    top: 30px;
+}
+/*aside*/
+aside {
+    float: right;
+    width: 30%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+aside .container-aside {
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+aside h2 {
+    font-size: 20px;
+}
+aside .row1 {
+    box-sizing: border-box;
+    border: 2px solid #eaeaea;
+    margin: 6px 2px;
+    padding: 6px 6px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+aside .row1:hover {
+    background-color: #eaeaea;
+}
+aside .hastag {
+    float: left;
+    position: relative;
+}
+aside #about img {
+    width: 35%;
+    height: 110px;
+    float: left;
+    border-radius: 4px;
+}
+aside #about .desc {
+    height: 120px;
+}
+aside #about .desc p, h3 {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 90%;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify;
+    margin-top: -10px;
+    box-sizing: border-box;
+}
+aside .box-subs {
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid #eaeaea;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+aside .email input[type=text]{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background: #E5E9F2;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+aside .box-subs .subs-button {
+    margin-top: 20px;
+    width: 100%;
+}
+button {
+    color: #fff;
+    font-size: 14px;
+    background-color: #4c6a78;
+    width: 160px;
+    height: 50px;
+    border: none;
+    font-weight: bold;
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+button:hover {
+    color: #fff;
+    font-size: 14px;
+    background-color: #61808f;
+    width: 160px;
+    height: 50px;
+    border: none;
+    font-weight: bold;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+footer {
+    border-top: 2px solid #eaeaea;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.pagination {
+    position: relative;
+    text-align: right;
+    margin: 0;
+}
+.pagination a {
+    padding: 6px 8px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+.pagination a:hover:not(.active) { 
+    background-color: #F05454;
+    color: white;
+}
+.pagination a:nth-child(1) { 
+    background-color: #61808f;
+    color: white;
+}
+      
+.pagination a:nth-child(6) {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    header{
+        width: 100%;
+        padding: 20px;
+    }
+    body {
+        width: 70%;
+        padding: 10px;
+    }
+    main {
+        padding: 10px;
+        width: 100%;
+    }
+    .content-hero {
+        width: 100%;
+        margin-bottom: -180px;
+    }
+    .content-hero img {
+        display: none;
+    }
+    #blog {
+        width: 100%;
+    }
+    article{
+        width: 60%;
+        margin-bottom: 180px;
+    }
+    .pagination {
+       float: left;
+    }
+    aside, footer{
+        width: 50%;
+        float: left;
+    }
+    .container-aside {
+        width: 60%;
+    }
+}
